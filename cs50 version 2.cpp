@@ -47,6 +47,7 @@ T get_value(std::string str, T value)
         {
           throw "invalid";
         }
+
         break;
 
       // std::string
