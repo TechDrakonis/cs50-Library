@@ -14,13 +14,13 @@ int get_int(string str, int i) // an int
   {
     std::cout << str;
     std::cin >> i;
-
-    return i;
   }
   catch(...)
   {
-    return get_int(str, i);
+    return get_int(str);
   }
+
+  return i;
 }
 
 long get_long(string, long l); // a long int
