@@ -22,7 +22,7 @@ int get_int(string str, int i) // an int
 
     // checks if the input is a valid int
     i = std::stoi(input);
-    if(input == std::to_string(i))
+    if(input != std::to_string(i))
     {
       throw "invalid";
     }
