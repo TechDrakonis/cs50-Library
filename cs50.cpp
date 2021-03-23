@@ -1,5 +1,6 @@
 #include "cs50.hpp"
 #include <iostream>
+#include <string>
 
 using std::string;
 
@@ -10,17 +11,30 @@ float get_float(string, float f); // a float
 
 int get_int(string str, int i) // an int
 {
+  // declares needed variable
+  string input;
+
   try
   {
+    // prompts the user for input
     std::cout << str;
-    std::cin >> i;
+    std::cin >> input;
+
+    // checks if the input is a valid int
+    i = std::stoi(input);
+    if(input == std::to_string(i))
+    {
+      throw "invalid";
+    }
+    else
+    {
+      return i;
+    }
   }
   catch(...)
   {
     return get_int(str);
   }
-
-  return i;
 }
 
 long get_long(string, long l); // a long int
