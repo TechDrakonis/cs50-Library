@@ -2,8 +2,6 @@
 #define CS50_HPP
 
 #include <iostream>
-
-template <typename T>
-T get_value(std::string, T);
+#include <string>
 
 #endif // CS50.HPP
