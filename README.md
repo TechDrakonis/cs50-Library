@@ -6,10 +6,23 @@ The cs50 staff of the Harvard University has written a library called 'cs50.h'. 
 > I wanted the file to be not only different from the inside but also from the outside. After long hours/minutes of thinking, I elected c++s50, because it also indicates, that the functions are written in c++. But you're welcome to deliver other name-ideas via a commit.
 
 ## cs50 origin
-The original cs50 library documentation: https://cs50.readthedocs.io/libraries/cs50/c/.
+The original cs50 library documentation: <https://cs50.readthedocs.io/libraries/cs50/c/>.
 
 ## c++s50
-For the c++s50 header I used an template function:
 
-### explanation of get_value functions
-    <body> </body>
+### example of the usage
+    #include <iostream>
+    #include "c++s50.hpp"
+
+    int main()
+    {
+      // template <typename T>
+      // void get_value(std::string outstr, T &value)
+      char character;
+      get_value("Please input a char: ", character);
+      std::cout << character << "\n";
+
+      // template <typename T>
+      // T get_value(std::string outstr);
+      std::cout << get_value <double> ("Please input a floating point number: ") << "\n";
+    }
